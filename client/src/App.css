@@ -1,16 +1,6 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'StreetFighter';
+  src: url('../font/Act_Of_Rejection.ttf') format('truetype');
 }
 
 .App-header {
@@ -19,15 +9,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  border: 1px solid red;
 }
-
-.App-link {
-  color: #61dafb;
+nav{
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid red;
 }
-
+.title {
+  font-family: 'StreetFighter';
+  width: 25;
+  border: 1px solid green;
+  text-align: center;
+}
+.profileOptions{ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 1px solid green;
+  width: 25%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
