@@ -1,6 +1,7 @@
 import React from "react";
-import logo from './logo.svg';
 import './App.css';
+import {Login} from "./login";
+import {register} from "./register";
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -10,10 +11,18 @@ function App() {
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
+
   return (
     <div className="App">
+      <Login />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <nav>
+          <p className="title">Fighting Game Trainer</p>
+          <div className="login">
+            <button onclick="showLogIn">Log In</button>
+            <p>Sign Up</p>
+          </div>
+        </nav>
         <p>
           {!data ? "Loading..." : data}
         </p>
@@ -21,6 +30,7 @@ function App() {
       </header>
     </div>
   );
+
 }
 
 export default App;
